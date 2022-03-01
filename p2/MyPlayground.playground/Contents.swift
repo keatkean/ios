@@ -1,3 +1,4 @@
+print("Part 1:")
 // Part 1 - Integers
 //
 // Declares a new integer variable, called 'i' and sets
@@ -31,7 +32,8 @@ var d = 3
 var result = (a * b) / (c - d)
 print (result)
 
-print()
+//---------------------------------------------------------
+print("\nPart 2:")
 // Part 2 - Doubles
 //
 // Declares two variables, one to store the radius of a circle
@@ -60,7 +62,8 @@ var f = 25.0
 var acc = f / m
 print (acc)
 
-print()
+//---------------------------------------------------------
+print("\nPart 3:")
 // Part 3 - Strings
 //
 // Declare a string variable and prints its contents
@@ -102,7 +105,8 @@ var index = uppercasedString.index(uppercasedString.startIndex, offsetBy: n)
 print (uppercasedString[index])
 
 
-print()
+//---------------------------------------------------------
+print("\nPart 4:")
 // Part 4 - Arrays and Collections
 //
 // Initialize an array of integers
