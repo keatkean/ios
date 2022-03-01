@@ -1,0 +1,10 @@
+#ignore files created by windows
+Thumbs.db
+
+#ignore files created by mac
+.DS_Store
+
+# Xcode
+## User settings
+xcuserdata/
+
