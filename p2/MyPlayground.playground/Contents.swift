@@ -31,7 +31,7 @@ var d = 3
 var result = (a * b) / (c - d)
 print (result)
 
-
+print()
 // Part 2 - Doubles
 //
 // Declares two variables, one to store the radius of a circle
@@ -59,3 +59,44 @@ var m = 10.0
 var f = 25.0
 var acc = f / m
 print (acc)
+
+print()
+// Part 3 - Strings
+//
+// Declare a string variable and prints its contents
+//
+var s = "Hello Nanyang Polytechnic!"
+print (s)
+
+// Prints the string within another string
+//
+print ("The string was '\(s)'");
+
+// Converts the whole string to uppercase and print the results.
+//
+var uppercasedString = s.uppercased()
+print (uppercasedString)
+
+// Converts the whole string to lowercase and print the results.
+//
+var lowercasedString = s.lowercased()
+print (lowercasedString)
+
+// Displaying results of computations in your string.
+//
+var areaResult = "The area of the circle of radius \(r) is \(area)"
+print (areaResult)
+
+// You can even do this:
+//
+print ("The circumference of that circle of radius \(r) will be \(circumference)")
+
+// Prints the length of the string
+//
+print (uppercasedString.count)
+
+// Gets the n-th character in a string
+//
+var n = 4
+var index = uppercasedString.index(uppercasedString.startIndex, offsetBy: n)
+print (uppercasedString[index])
