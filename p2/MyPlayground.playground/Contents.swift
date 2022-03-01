@@ -1,4 +1,4 @@
-print("Part 1:")
+print("Part 1 - Integers:")
 // Part 1 - Integers
 //
 // Declares a new integer variable, called 'i' and sets
@@ -33,7 +33,7 @@ var result = (a * b) / (c - d)
 print (result)
 
 //---------------------------------------------------------
-print("\nPart 2:")
+print("\nPart 2 - Doubles:")
 // Part 2 - Doubles
 //
 // Declares two variables, one to store the radius of a circle
@@ -63,7 +63,7 @@ var acc = f / m
 print (acc)
 
 //---------------------------------------------------------
-print("\nPart 3:")
+print("\nPart 3 - Strings:")
 // Part 3 - Strings
 //
 // Declare a string variable and prints its contents
@@ -106,7 +106,7 @@ print (uppercasedString[index])
 
 
 //---------------------------------------------------------
-print("\nPart 4:")
+print("\nPart 4 - Arrays and Collections:")
 // Part 4 - Arrays and Collections
 //
 // Initialize an array of integers
