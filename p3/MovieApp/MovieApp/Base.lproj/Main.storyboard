@@ -24,21 +24,30 @@
             </objects>
             <point key="canvasLocation" x="198" y="252"/>
         </scene>
-        <!--Item 1-->
+        <!--Movies-->
         <scene sceneID="Zbh-sQ-elT">
             <objects>
                 <viewController id="ysI-mC-pPG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L2G-c4-9Do">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpV-Sc-jxn">
+                                <rect key="frame" x="170" y="434" width="75" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6bc-fF-YNy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="tcm-DF-yJh"/>
+                    <tabBarItem key="tabBarItem" title="Movies" image="film.fill" catalog="system" id="tcm-DF-yJh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XQQ-dz-yzT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="198" y="-355"/>
+            <point key="canvasLocation" x="197.10144927536234" y="-355.58035714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9eP-lD-3lj">
@@ -60,6 +69,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="film.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
