@@ -11,7 +11,7 @@
         <!--Profile-->
         <scene sceneID="hxv-1d-b3V">
             <objects>
-                <viewController id="rD9-us-0iR" sceneMemberID="viewController">
+                <viewController id="rD9-us-0iR" customClass="ProfileViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1SV-i9-gRE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
