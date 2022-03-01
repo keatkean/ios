@@ -39,3 +39,63 @@ if indexOf17 != nil
     primeNumbers.remove(at: indexOf17!)
     print (primeNumbers)
 }
+
+print()
+// --------------------------------------------------------
+// Initialize an array of strings and print the first and last item.
+//
+var bigNames = ["Audi", "Bentlet", "Chevrolet"]
+print ("First big name: \(bigNames.first!)")
+print ("Last big name: \(bigNames.last!)")
+
+// Print all the names in reverse order, each name appearing one
+// line after another
+//
+for name in bigNames.reversed()
+{
+    print (name)
+}
+
+// Remove the first and last items and print the list out
+//
+bigNames.removeFirst()
+bigNames.removeLast()
+print (bigNames)
+
+// Dealing with multi-dimensional arrays
+//
+var grid =
+    [
+        ["3", "2", "1"], // grid[0]
+        ["6", "5", "4"], // grid[1]
+        ["9", "8", "7"], // grid[2]
+    ]
+
+// Print the content at [0][0]. Try to change the values
+// in the square brackets to see the output.
+//
+print (grid[0][0])
+
+print()
+// --------------------------------------------------------
+// Declare an associative array (dictionary) of
+// string : string pair.
+var stocks : [String: String] =
+    ["YHOO": "Yahoo! Inc.",
+     "CSCO" : "Cisco Systems, Inc."]
+
+// Adds more stock codes
+//
+stocks["GOOG"] = "Google Inc."
+stocks["AAPL"] = "Apple Inc."
+stocks["MSFT"] = "Microsoft Corporation"
+
+// Remove stock codes
+stocks.removeValue(forKey: "YHOO")
+
+print ("There are \(stocks.count) stocks")
+for (stockCode, company) in stocks
+{
+    print ("Stock Code: \(stockCode), Company: \(company)")
+}
+

@@ -17,7 +17,7 @@ var circumference = 2 * pi * r
 //
 var area = pi * r * r
 
-
+// --------------------------------------------------------
 // Part 3 - Strings
 //
 // Declare a string variable and prints its contents
