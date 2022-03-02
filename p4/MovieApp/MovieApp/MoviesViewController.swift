@@ -14,7 +14,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movieList.count
     }
-    
+
+    /*
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // First we query the table view to see if there are
         // any UITableViewCells that can be reused. iOS will
@@ -37,7 +38,42 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
+    */
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // First we query the table view to see if there are
+        // any UITableViewCells that can be reused. iOS will
+        // create a new one if there aren't any.
+        //
+        let cell : MovieTableViewCell = tableView
+                    .dequeueReusableCell (withIdentifier: "MovieCell",
+                    for: indexPath)
+                    as! MovieTableViewCell
+
+        
+        // Using the re-used cell, or the newly created
+        // cell, we update the text label's text property.
+        //
+        let movie = movieList[indexPath.row]
+        cell.nameLabel.text = movie.name
+        
+        var stars = ""
+        for _ in 1...movie.rating {
+            stars.append("⭐")
+        }
+        cell.ratingLabel.text = stars
+        
+        // Create URL
+        let url = URL(string: movie.image)!
+        
+        // Fetch Image Data
+        if let data = try? Data(contentsOf: url) {
+            // Create Image and Update Image View
+            cell.movieImageView.image = UIImage(data: data)
+        }
+        
+        return cell
+    }
     
     @IBOutlet weak var tableView: UITableView!
     
