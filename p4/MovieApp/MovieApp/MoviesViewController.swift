@@ -8,8 +8,11 @@
 import UIKit
 
 class MoviesViewController: UIViewController, UITableViewDataSource {
+    // Declare an array of Movie objects
+    var movieList : [Movie] = []
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return movieList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -23,7 +26,14 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         // Using the re-used cell, or the newly created
         // cell, we update the text label's text property.
         //
-        cell.textLabel?.text = "Row #\(indexPath.row + 1)"
+        let movie = movieList[indexPath.row]
+        cell.textLabel?.text = movie.name
+        
+        var stars = ""
+        for _ in 1...movie.rating {
+            stars.append("⭐")
+        }
+        cell.detailTextLabel?.text = stars
         
         return cell
     }
@@ -35,6 +45,15 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        // Create some Movie objects and insert it into
+        // the array.
+        //
+        movieList.append(Movie(
+            name: "The Batman",
+            desc: "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.",
+            rating: 5,
+            image: "https://www.gv.com.sg/media/imagesresize/img3040.jpg"))
+        
         tableView.dataSource = self
     }
     
