@@ -82,6 +82,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        self.title = "Movies"
+        
         // Create some Movie objects and insert it into
         // the array.
         // Source: https://www.gv.com.sg/GVMovies
