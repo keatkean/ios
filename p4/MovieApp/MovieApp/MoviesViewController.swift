@@ -84,7 +84,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
         // Create some Movie objects and insert it into
         // the array.
-        //
+        // Source: https://www.gv.com.sg/GVMovies
+        
         movieList.append(Movie(
             name: "The Batman",
             desc: "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing a serial killer known as the Riddler.",
