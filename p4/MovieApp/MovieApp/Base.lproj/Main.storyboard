@@ -86,7 +86,7 @@
                                 <rect key="frame" x="0.0" y="44" width="390" height="717"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="142" id="Clh-0g-hDh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="142" id="Clh-0g-hDh" customClass="MovieTableViewCell" customModule="MovieApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="142"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Clh-0g-hDh" id="rZt-Mx-WD6">
@@ -124,6 +124,11 @@
                                                 <constraint firstItem="Add-Nq-Z5b" firstAttribute="leading" secondItem="vL6-FX-Rm1" secondAttribute="trailing" constant="20" id="tny-Vv-QEL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="movieImageView" destination="vL6-FX-Rm1" id="DqZ-h1-WRf"/>
+                                            <outlet property="nameLabel" destination="Add-Nq-Z5b" id="b8c-Zm-zwS"/>
+                                            <outlet property="ratingLabel" destination="zXW-EM-Qso" id="2OP-U3-vMe"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
