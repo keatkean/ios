@@ -13,6 +13,7 @@
 		70750A9A27CE0AF40098B57B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70750A9927CE0AF40098B57B /* Assets.xcassets */; };
 		70750A9D27CE0AF40098B57B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70750A9B27CE0AF40098B57B /* LaunchScreen.storyboard */; };
 		70750AA527CE22DF0098B57B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70750AA427CE22DF0098B57B /* ProfileViewController.swift */; };
+		70750AA927CF84CA0098B57B /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70750AA827CF84CA0098B57B /* MoviesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		70750A9C27CE0AF40098B57B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70750A9E27CE0AF40098B57B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70750AA427CE22DF0098B57B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		70750AA827CF84CA0098B57B /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				70750A9B27CE0AF40098B57B /* LaunchScreen.storyboard */,
 				70750A9E27CE0AF40098B57B /* Info.plist */,
 				70750AA427CE22DF0098B57B /* ProfileViewController.swift */,
+				70750AA827CF84CA0098B57B /* MoviesViewController.swift */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				70750AA527CE22DF0098B57B /* ProfileViewController.swift in Sources */,
 				70750A9127CE0AF30098B57B /* AppDelegate.swift in Sources */,
 				70750A9327CE0AF30098B57B /* SceneDelegate.swift in Sources */,
+				70750AA927CF84CA0098B57B /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
