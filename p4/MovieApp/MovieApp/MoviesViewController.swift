@@ -9,7 +9,7 @@ import UIKit
 
 class MoviesViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 8
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -23,7 +23,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         // Using the re-used cell, or the newly created
         // cell, we update the text label's text property.
         //
-        cell.textLabel?.text = "This is some data"
+        cell.textLabel?.text = "Row #\(indexPath.row + 1)"
         
         return cell
     }
