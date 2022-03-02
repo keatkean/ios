@@ -50,26 +50,27 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
                     for: indexPath)
                     as! MovieTableViewCell
 
-        
-        // Using the re-used cell, or the newly created
-        // cell, we update the text label's text property.
-        //
+        // Name
         let movie = movieList[indexPath.row]
         cell.nameLabel.text = movie.name
         
+        // Rating
         var stars = ""
         for _ in 1...movie.rating {
             stars.append("⭐")
         }
         cell.ratingLabel.text = stars
-        
-        // Create URL
+
+        // Image
         let url = URL(string: movie.image)!
-        
-        // Fetch Image Data
-        if let data = try? Data(contentsOf: url) {
-            // Create Image and Update Image View
-            cell.movieImageView.image = UIImage(data: data)
+        DispatchQueue.global().async {
+            // Fetch Image Data
+            if let data = try? Data(contentsOf: url) {
+                DispatchQueue.main.async {
+                    // Create Image and Update Image View
+                    cell.movieImageView.image = UIImage(data: data)
+                }
+            }
         }
         
         return cell
