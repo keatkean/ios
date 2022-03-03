@@ -39,7 +39,22 @@ class AddMovieViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
             return
         }
-
+        
+        let url = URL(string: imageTextField.text!)!
+        if (try? Data(contentsOf: url)) == nil {
+            let alert = UIAlertController(
+                title: "Invalid Image URL",
+                message: "",
+                preferredStyle: UIAlertController.Style.alert)
+            
+            alert.addAction(UIAlertAction(title: "OK",
+                                          style: UIAlertAction.Style.default,
+                                          handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
         if let movieItem = movie {
             // assign the data entered by the user into
             // the movie object
