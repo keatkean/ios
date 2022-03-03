@@ -50,19 +50,20 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
                     for: indexPath)
                     as! MovieTableViewCell
 
+        let m = movieList[indexPath.row]
+        
         // Name
-        let movie = movieList[indexPath.row]
-        cell.nameLabel.text = movie.name
+        cell.nameLabel.text = m.name
         
         // Rating
-        var stars = ""
-        for _ in 1...movie.rating {
-            stars.append("⭐")
+        var rating = ""
+        for _ in 1...m.rating {
+            rating.append("🍿")
         }
-        cell.ratingLabel.text = stars
+        cell.ratingLabel.text = rating
 
         // Image
-        let url = URL(string: movie.image)!
+        let url = URL(string: m.image)!
         DispatchQueue.global().async {
             // Fetch Image Data
             if let data = try? Data(contentsOf: url) {

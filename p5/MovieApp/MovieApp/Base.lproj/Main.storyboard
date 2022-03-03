@@ -153,10 +153,10 @@
             </objects>
             <point key="canvasLocation" x="1126.1538461538462" y="-356.1611374407583"/>
         </scene>
-        <!--View Controller-->
+        <!--Movie Details View Controller-->
         <scene sceneID="XhJ-k6-mix">
             <objects>
-                <viewController id="KSc-QM-4lQ" sceneMemberID="viewController">
+                <viewController id="KSc-QM-4lQ" customClass="MovieDetailsViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kww-89-fQX">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -216,6 +216,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Kjz-Vc-q9T"/>
+                    <connections>
+                        <outlet property="descLabel" destination="Rxz-bc-gk7" id="bcj-fr-zmA"/>
+                        <outlet property="movieImageView" destination="24S-si-Gnx" id="hUL-fe-m7E"/>
+                        <outlet property="nameLabel" destination="bff-3g-6bl" id="hvS-TW-Q1d"/>
+                        <outlet property="ratingLabel" destination="wLq-nR-RBY" id="BgQ-Px-Qpo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FbE-JN-8iZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

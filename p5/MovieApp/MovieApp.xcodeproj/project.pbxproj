@@ -16,6 +16,7 @@
 		70750AA927CF84CA0098B57B /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70750AA827CF84CA0098B57B /* MoviesViewController.swift */; };
 		70750AAB27CF880B0098B57B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70750AAA27CF880B0098B57B /* Movie.swift */; };
 		70750AAD27CF8FB60098B57B /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70750AAC27CF8FB60098B57B /* MovieTableViewCell.swift */; };
+		70750AB127D057E30098B57B /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70750AB027D057E30098B57B /* MovieDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		70750AA827CF84CA0098B57B /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		70750AAA27CF880B0098B57B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		70750AAC27CF8FB60098B57B /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		70750AB027D057E30098B57B /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				70750AAA27CF880B0098B57B /* Movie.swift */,
 				70750AA827CF84CA0098B57B /* MoviesViewController.swift */,
 				70750AAC27CF8FB60098B57B /* MovieTableViewCell.swift */,
+				70750AB027D057E30098B57B /* MovieDetailsViewController.swift */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				70750AA527CE22DF0098B57B /* ProfileViewController.swift in Sources */,
 				70750A9127CE0AF30098B57B /* AppDelegate.swift in Sources */,
 				70750AAD27CF8FB60098B57B /* MovieTableViewCell.swift in Sources */,
+				70750AB127D057E30098B57B /* MovieDetailsViewController.swift in Sources */,
 				70750A9327CE0AF30098B57B /* SceneDelegate.swift in Sources */,
 				70750AA927CF84CA0098B57B /* MoviesViewController.swift in Sources */,
 				70750AAB27CF880B0098B57B /* Movie.swift in Sources */,
