@@ -83,20 +83,19 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Hide Tab Bar when push
+        segue.destination.hidesBottomBarWhenPushed = true
+        
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        
         if (segue.identifier == "ShowMovieDetails")
         {
-            let detailViewController =
-            segue.destination as! MovieDetailsViewController
+            let detailsViewController = segue.destination as! MovieDetailsViewController
+            detailsViewController.hidesBottomBarWhenPushed = true
             
-            let selectedIndexPath = self.tableView.indexPathForSelectedRow
-            
-            if (selectedIndexPath != nil)
-            {
-                let m = movieList[selectedIndexPath!.row]
-                detailViewController.movie = m
+            if let path = tableView.indexPathForSelectedRow {
+                let m = movieList[path.row]
+                detailsViewController.movie = m
             }
         }
     }
