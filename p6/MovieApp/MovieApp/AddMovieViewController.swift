@@ -40,6 +40,7 @@ class AddMovieViewController: UIViewController {
             return
         }
         
+        // Validate image url
         let url = URL(string: imageTextField.text!)!
         if (try? Data(contentsOf: url)) == nil {
             let alert = UIAlertController(

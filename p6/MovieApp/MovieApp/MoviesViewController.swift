@@ -11,6 +11,25 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
     // Declare an array of Movie objects
     var movieList : [Movie] = []
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+        self.title = "Movies"
+        
+        DataManager.setupTestData()
+        tableView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        movieList = DataManager.getMovieList()
+        tableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movieList.count
     }
@@ -45,25 +64,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         }
         
         return cell
-    }
-    
-    @IBOutlet weak var tableView: UITableView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        self.title = "Movies"
-        
-        DataManager.setupTestData()
-        tableView.dataSource = self
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        movieList = DataManager.getMovieList()
-        tableView.reloadData()
     }
     
     // MARK: - Navigation
