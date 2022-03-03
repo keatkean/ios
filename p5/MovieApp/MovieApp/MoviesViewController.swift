@@ -14,31 +14,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movieList.count
     }
-
-    /*
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // First we query the table view to see if there are
-        // any UITableViewCells that can be reused. iOS will
-        // create a new one if there aren't any.
-        //
-        let cell = tableView.dequeueReusableCell(
-            withIdentifier: "MovieCell", for: indexPath)
-        
-        // Using the re-used cell, or the newly created
-        // cell, we update the text label's text property.
-        //
-        let movie = movieList[indexPath.row]
-        cell.textLabel?.text = movie.name
-        
-        var stars = ""
-        for _ in 1...movie.rating {
-            stars.append("⭐")
-        }
-        cell.detailTextLabel?.text = stars
-        
-        return cell
-    }
-    */
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // First we query the table view to see if there are
@@ -46,10 +21,10 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         // create a new one if there aren't any.
         //
         let cell : MovieTableViewCell = tableView
-                    .dequeueReusableCell (withIdentifier: "MovieCell",
-                    for: indexPath)
-                    as! MovieTableViewCell
-
+            .dequeueReusableCell (withIdentifier: "MovieCell",
+                                  for: indexPath)
+        as! MovieTableViewCell
+        
         let m = movieList[indexPath.row]
         
         // Name
@@ -61,7 +36,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
             rating.append("🍿")
         }
         cell.ratingLabel.text = rating
-
+        
         // Image
         let url = URL(string: m.image)!
         DispatchQueue.global().async {
@@ -110,15 +85,24 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         tableView.dataSource = self
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    // MARK: - Navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        if (segue.identifier == "ShowMovieDetails")
+        {
+            let detailViewController =
+            segue.destination as! MovieDetailsViewController
+            
+            let selectedIndexPath = self.tableView.indexPathForSelectedRow
+            
+            if (selectedIndexPath != nil)
+            {
+                let m = movieList[selectedIndexPath!.row]
+                detailViewController.movie = m
+            }
+        }
+    }
 }

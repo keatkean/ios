@@ -129,7 +129,7 @@
                                             <outlet property="movieImageView" destination="vL6-FX-Rm1" id="DqZ-h1-WRf"/>
                                             <outlet property="nameLabel" destination="Add-Nq-Z5b" id="b8c-Zm-zwS"/>
                                             <outlet property="ratingLabel" destination="zXW-EM-Qso" id="2OP-U3-vMe"/>
-                                            <segue destination="KSc-QM-4lQ" kind="show" id="tTT-RJ-D3w"/>
+                                            <segue destination="KSc-QM-4lQ" kind="show" identifier="ShowMovieDetails" id="tTT-RJ-D3w"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
