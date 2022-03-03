@@ -153,6 +153,9 @@
                                                 <rect key="frame" x="8" y="545.66666666666663" width="374" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                                <connections>
+                                                    <action selector="saveButtonPressed:" destination="EA4-hO-u20" eventType="touchUpInside" id="FBQ-3q-kZs"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -186,7 +189,6 @@
                         <outlet property="imageTextField" destination="LV4-cs-RD3" id="mv7-13-sgy"/>
                         <outlet property="nameTextField" destination="Hem-7j-7Wq" id="eDC-jF-h4o"/>
                         <outlet property="ratingTextField" destination="0pY-g8-Ryg" id="7q5-e5-D6S"/>
-                        <outlet property="saveButtonPressed" destination="gSW-OV-Cbd" id="3AJ-Ye-oo0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cc-1B-O5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
