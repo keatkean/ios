@@ -19,7 +19,12 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
         self.title = "Movies"
         
-        DataManager.setupTestData()
+        movieList = DataManager.getMovieList()
+        if (movieList.count == 0)
+        {
+            DataManager.setupTestData()
+        }
+        
         tableView.dataSource = self
     }
     
