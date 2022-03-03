@@ -76,5 +76,16 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
                 detailsViewController.movie = m
             }
         }
+        
+        // Here we check for the AddMovieDetails segue,
+        // which is trigger by the user clicking on the +
+        // button at the top of the navigation bar
+        //
+        if(segue.identifier == "AddMovie")
+        {
+            let addMovieViewController = segue.destination as! AddMovieViewController
+            let movie = Movie(id: "", name: "", desc: "", rating: 1, image: "")
+            addMovieViewController.movie = movie
+        }
     }
 }

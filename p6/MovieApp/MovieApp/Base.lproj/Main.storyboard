@@ -268,7 +268,7 @@
                     <navigationItem key="navigationItem" id="Dyt-Cu-iwW">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="9za-tt-crj">
                             <connections>
-                                <segue destination="EA4-hO-u20" kind="show" id="2eZ-o3-krw"/>
+                                <segue destination="EA4-hO-u20" kind="show" identifier="AddMovie" id="2eZ-o3-krw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

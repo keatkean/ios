@@ -13,7 +13,7 @@ class Movie : NSObject {
     var desc: String
     var rating: Int
     var image: String
-    
+
     init(id: String, name: String, desc: String, rating: Int, image: String)
     {
         self.id = id
