@@ -153,6 +153,9 @@
                                                 <rect key="frame" x="8" y="545.66666666666663" width="374" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                                <connections>
+                                                    <action selector="savePressed:" destination="EA4-hO-u20" eventType="touchUpInside" id="aj2-g5-bep"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
