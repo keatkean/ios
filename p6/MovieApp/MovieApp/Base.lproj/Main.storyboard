@@ -74,6 +74,22 @@
             </objects>
             <point key="canvasLocation" x="1126.1538461538462" y="251.65876777251182"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="QVu-Cw-qX4">
+            <objects>
+                <viewController id="EA4-hO-u20" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yi2-to-xnS">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cfY-5n-izb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dFQ-Cj-aYb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5cc-1B-O5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1888" y="299"/>
+        </scene>
         <!--Movies View Controller-->
         <scene sceneID="Zbh-sQ-elT">
             <objects>
@@ -144,7 +160,13 @@
                             <constraint firstItem="gy7-vf-acv" firstAttribute="leading" secondItem="6bc-fF-YNy" secondAttribute="leading" id="yNZ-Tr-m87"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Dyt-Cu-iwW"/>
+                    <navigationItem key="navigationItem" id="Dyt-Cu-iwW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="9za-tt-crj">
+                            <connections>
+                                <segue destination="EA4-hO-u20" kind="show" id="2eZ-o3-krw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="gy7-vf-acv" id="qLN-tF-yaT"/>
                     </connections>
