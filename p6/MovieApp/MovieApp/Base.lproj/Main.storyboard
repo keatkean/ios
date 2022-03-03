@@ -193,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cc-1B-O5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1888" y="299"/>
+            <point key="canvasLocation" x="1888" y="393"/>
         </scene>
         <!--Movies View Controller-->
         <scene sceneID="Zbh-sQ-elT">
@@ -342,7 +342,13 @@
                             <constraint firstItem="Ybz-vc-Ikr" firstAttribute="trailing" secondItem="rE8-Br-W53" secondAttribute="trailing" id="yxz-nT-5O8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Kjz-Vc-q9T"/>
+                    <navigationItem key="navigationItem" id="Kjz-Vc-q9T">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Spw-mk-nnt">
+                            <connections>
+                                <segue destination="EA4-hO-u20" kind="show" identifier="EditMovie" id="1NT-ME-lUW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="descLabel" destination="Rxz-bc-gk7" id="bcj-fr-zmA"/>
                         <outlet property="movieImageView" destination="24S-si-Gnx" id="hUL-fe-m7E"/>
@@ -393,6 +399,9 @@
             <point key="canvasLocation" x="196.92307692307691" y="-356.1611374407583"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1NT-ME-lUW"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="film.fill" catalog="system" width="128" height="93"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
