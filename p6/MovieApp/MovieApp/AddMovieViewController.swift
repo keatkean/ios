@@ -15,9 +15,7 @@ class AddMovieViewController: UIViewController {
     @IBOutlet weak var imageTextField: UITextField!
     @IBOutlet weak var descTextView: UILabel!
     
-    @IBAction func savePressed(_ sender: Any) {
-        
-    }
+    @IBOutlet weak var saveButtonPressed: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
