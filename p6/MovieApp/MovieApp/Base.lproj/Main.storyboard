@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxa-BL-5vE">
-                                <rect key="frame" x="162.33333333333334" y="388" width="65.333333333333343" height="29"/>
+                                <rect key="frame" x="162.33333333333334" y="244" width="65.333333333333343" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5m-HT-i0i">
-                                <rect key="frame" x="0.0" y="427" width="390" height="216"/>
+                                <rect key="frame" x="0.0" y="283" width="390" height="216"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RI4-sk-b3h">
-                                <rect key="frame" x="162.66666666666666" y="663" width="64.666666666666657" height="31"/>
+                                <rect key="frame" x="162.66666666666666" y="519" width="64.666666666666657" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Select"/>
                                 <connections>
@@ -41,8 +41,8 @@
                             <constraint firstItem="RI4-sk-b3h" firstAttribute="centerX" secondItem="ugB-hk-Od7" secondAttribute="centerX" id="Ix6-hZ-eSJ"/>
                             <constraint firstItem="RI4-sk-b3h" firstAttribute="top" secondItem="S5m-HT-i0i" secondAttribute="bottom" constant="20" id="PBy-L5-1tq"/>
                             <constraint firstItem="S5m-HT-i0i" firstAttribute="leading" secondItem="ugB-hk-Od7" secondAttribute="leading" id="ZRD-6n-AYd"/>
-                            <constraint firstItem="oxa-BL-5vE" firstAttribute="centerY" secondItem="ugB-hk-Od7" secondAttribute="centerY" id="uBc-hZ-qwF"/>
                             <constraint firstItem="S5m-HT-i0i" firstAttribute="trailing" secondItem="ugB-hk-Od7" secondAttribute="trailing" id="xTC-8J-CG1"/>
+                            <constraint firstItem="oxa-BL-5vE" firstAttribute="top" secondItem="ugB-hk-Od7" secondAttribute="top" constant="200" id="yXM-Ks-bHM"/>
                             <constraint firstItem="S5m-HT-i0i" firstAttribute="top" secondItem="oxa-BL-5vE" secondAttribute="bottom" constant="10" id="yu3-b7-Gy2"/>
                         </constraints>
                     </view>
