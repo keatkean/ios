@@ -53,9 +53,14 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         self.title = "Movies"
         
         DataManager.setupTestData()
-        movieList = DataManager.getMovieList()
-        
         tableView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        movieList = DataManager.getMovieList()
+        tableView.reloadData()
     }
     
     // MARK: - Navigation
@@ -77,7 +82,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
             }
         }
         
-        // Here we check for the AddMovieDetails segue,
+        // Here we check for the AddMovie segue,
         // which is trigger by the user clicking on the +
         // button at the top of the navigation bar
         //

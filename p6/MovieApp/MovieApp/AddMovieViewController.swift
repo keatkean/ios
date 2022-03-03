@@ -15,7 +15,7 @@ class AddMovieViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ratingTextField: UITextField!
     @IBOutlet weak var imageTextField: UITextField!
-    @IBOutlet weak var descTextView: UILabel!
+    @IBOutlet weak var descTextView: UITextView!
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         // Validate to ensure that all the fields are
@@ -41,8 +41,6 @@ class AddMovieViewController: UIViewController {
         }
 
         if let movieItem = movie {
-            let isNew = movieItem.id == ""
-            
             // assign the data entered by the user into
             // the movie object
             //
@@ -59,20 +57,6 @@ class AddMovieViewController: UIViewController {
             //
             DataManager.saveMovie(movie: movieItem)
             
-            if (isNew)
-            {
-                // Calls the root view controller's table view to
-                // to refresh itself.
-                //
-                let parent = self.navigationController?.viewControllers[0] as! MoviesViewController
-                parent.movieList = DataManager.getMovieList()
-                parent.tableView?.reloadData()
-            }
-            else {
-                
-            }
-            
-            
             // close this view controller and pop back out to
             // the one that shows the list of movies.
             //
@@ -86,6 +70,17 @@ class AddMovieViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let m = movie {
+            idTextField.text = m.id
+            nameTextField.text = m.name
+            ratingTextField.text = "\(m.rating)"
+            imageTextField.text = m.image
+            descTextView.text = m.desc
+        }
+    }
     
     /*
      // MARK: - Navigation
