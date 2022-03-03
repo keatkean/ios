@@ -39,8 +39,10 @@ class AddMovieViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
             return
         }
-        
+
         if let movieItem = movie {
+            let isNew = movieItem.id == ""
+            
             // assign the data entered by the user into
             // the movie object
             //
@@ -55,14 +57,21 @@ class AddMovieViewController: UIViewController {
             // Execute the SQL to insert the data
             // into the database
             //
-            DataManager.addMovie(movie: movieItem)
+            DataManager.saveMovie(movie: movieItem)
             
-            // Calls the root view controller's table view to
-            // to refresh itself.
-            //
-            let parent = self.navigationController?.viewControllers[0] as! MoviesViewController
-            parent.movieList = DataManager.getMovieList()
-            parent.tableView?.reloadData()
+            if (isNew)
+            {
+                // Calls the root view controller's table view to
+                // to refresh itself.
+                //
+                let parent = self.navigationController?.viewControllers[0] as! MoviesViewController
+                parent.movieList = DataManager.getMovieList()
+                parent.tableView?.reloadData()
+            }
+            else {
+                
+            }
+            
             
             // close this view controller and pop back out to
             // the one that shows the list of movies.
