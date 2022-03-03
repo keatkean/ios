@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="1126.1538461538462" y="251.65876777251182"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Movie View Controller-->
         <scene sceneID="QVu-Cw-qX4">
             <objects>
-                <viewController id="EA4-hO-u20" sceneMemberID="viewController">
+                <viewController id="EA4-hO-u20" customClass="AddMovieViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yi2-to-xnS">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -116,7 +116,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0pY-g8-Ryg">
                                         <rect key="frame" x="8" y="187" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beh-Cy-4Cm">
                                         <rect key="frame" x="8" y="231" width="374" height="20.333333333333343"/>
@@ -165,6 +165,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dFQ-Cj-aYb"/>
+                    <connections>
+                        <outlet property="descTextView" destination="8Nq-b0-WNM" id="YI4-eG-hvF"/>
+                        <outlet property="idTextField" destination="Atw-g6-6cF" id="YXy-SG-kS7"/>
+                        <outlet property="imageTextField" destination="LV4-cs-RD3" id="mv7-13-sgy"/>
+                        <outlet property="nameTextField" destination="Hem-7j-7Wq" id="eDC-jF-h4o"/>
+                        <outlet property="ratingTextField" destination="0pY-g8-Ryg" id="7q5-e5-D6S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cc-1B-O5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
