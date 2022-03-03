@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="1126.1538461538462" y="251.65876777251182"/>
         </scene>
-        <!--Add Movie View Controller-->
+        <!--Save Movie View Controller-->
         <scene sceneID="QVu-Cw-qX4">
             <objects>
-                <viewController id="EA4-hO-u20" customClass="AddMovieViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EA4-hO-u20" customClass="SaveMovieViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yi2-to-xnS">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,7 +154,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Save"/>
                                                 <connections>
-                                                    <action selector="saveButtonPressed:" destination="EA4-hO-u20" eventType="touchUpInside" id="FBQ-3q-kZs"/>
+                                                    <action selector="saveButtonPressed:" destination="EA4-hO-u20" eventType="touchUpInside" id="wd4-Yc-LeW"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -184,11 +184,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="dFQ-Cj-aYb"/>
                     <connections>
-                        <outlet property="descTextView" destination="JXH-hl-ObP" id="v3a-ja-rwu"/>
-                        <outlet property="idTextField" destination="Atw-g6-6cF" id="YXy-SG-kS7"/>
-                        <outlet property="imageTextField" destination="LV4-cs-RD3" id="mv7-13-sgy"/>
-                        <outlet property="nameTextField" destination="Hem-7j-7Wq" id="eDC-jF-h4o"/>
-                        <outlet property="ratingTextField" destination="0pY-g8-Ryg" id="7q5-e5-D6S"/>
+                        <outlet property="descTextView" destination="JXH-hl-ObP" id="7yv-GO-UqA"/>
+                        <outlet property="idTextField" destination="Atw-g6-6cF" id="cu7-Rt-pcv"/>
+                        <outlet property="imageTextField" destination="LV4-cs-RD3" id="WTm-uo-4jv"/>
+                        <outlet property="nameTextField" destination="Hem-7j-7Wq" id="na7-vR-gzW"/>
+                        <outlet property="ratingTextField" destination="0pY-g8-Ryg" id="PcW-XR-KeU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cc-1B-O5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

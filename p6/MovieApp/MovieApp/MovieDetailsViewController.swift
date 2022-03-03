@@ -64,8 +64,8 @@ class MovieDetailsViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if(segue.identifier == "EditMovie")
         {
-            let addMovieViewController = segue.destination as! AddMovieViewController
-            addMovieViewController.movie = movie
+            let saveMovieViewController = segue.destination as! SaveMovieViewController
+            saveMovieViewController.movie = movie
         }
     }
 }

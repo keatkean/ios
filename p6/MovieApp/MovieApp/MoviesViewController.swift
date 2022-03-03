@@ -105,9 +105,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         //
         if(segue.identifier == "AddMovie")
         {
-            let addMovieViewController = segue.destination as! AddMovieViewController
+            let saveMovieViewController = segue.destination as! SaveMovieViewController
             let movie = Movie(id: "", name: "", desc: "", rating: 0, image: "https://raw.githubusercontent.com/lihaiyun/ios/main/resources/popcorn.png")
-            addMovieViewController.movie = movie
+            saveMovieViewController.movie = movie
         }
     }
 }

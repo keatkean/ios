@@ -1,5 +1,5 @@
 //
-//  AddMovieViewController.swift
+//  SaveMovieViewController.swift
 //  MovieApp
 //
 //  Created by HaiYun on 3/3/22.
@@ -7,8 +7,7 @@
 
 import UIKit
 
-class AddMovieViewController: UIViewController {
-    
+class SaveMovieViewController: UIViewController {
     var movie: Movie?
     
     @IBOutlet weak var idTextField: UITextField!
@@ -16,7 +15,7 @@ class AddMovieViewController: UIViewController {
     @IBOutlet weak var ratingTextField: UITextField!
     @IBOutlet weak var imageTextField: UITextField!
     @IBOutlet weak var descTextView: UITextView!
-    
+
     @IBAction func saveButtonPressed(_ sender: Any) {
         // Validate to ensure that all the fields are
         // entered by the user. If not we show an alert.
@@ -82,7 +81,7 @@ class AddMovieViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
     
@@ -101,15 +100,15 @@ class AddMovieViewController: UIViewController {
             descTextView.text = m.desc
         }
     }
-    
+
     /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
