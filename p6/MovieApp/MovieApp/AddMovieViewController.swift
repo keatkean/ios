@@ -61,7 +61,7 @@ class AddMovieViewController: UIViewController {
             // the movie object
             //
             movieItem.id = idTextField.text!
-            movieItem.name = nameTextField.text!
+            movieItem.name = nameTextField.text!.capitalized
             movieItem.desc = descTextView.text!
             movieItem.image = imageTextField.text!
             

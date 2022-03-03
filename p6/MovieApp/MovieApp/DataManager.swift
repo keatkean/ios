@@ -14,6 +14,10 @@ class DataManager: NSObject {
         movieDict[movie.id] = movie
     }
     
+    static func deleteMovie(id:String) {
+        movieDict.removeValue(forKey: id)
+    }
+    
     static func getMovieList() -> [Movie] {
         var movieList = Array(movieDict.values)
         movieList.sort{$0.name < $1.name}
