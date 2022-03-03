@@ -9,13 +9,15 @@ import UIKit
 
 class DataManager: NSObject {
     static var movieDict : [String: Movie] = [:]
-
+    
     static func saveMovie(movie: Movie) {
         movieDict[movie.id] = movie
     }
     
     static func getMovieList() -> [Movie] {
-        return Array(movieDict.values)
+        var movieList = Array(movieDict.values)
+        movieList.sort{$0.name < $1.name}
+        return movieList
     }
     
     static func setupTestData() {

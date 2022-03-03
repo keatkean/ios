@@ -24,8 +24,11 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         
         // Rating
         var rating = ""
-        for _ in 1...m.rating {
-            rating.append("🍿")
+        if (m.rating > 0)
+        {
+            for _ in 1...m.rating {
+                rating.append("🍿")
+            }
         }
         cell.ratingLabel.text = rating
         
@@ -89,7 +92,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         if(segue.identifier == "AddMovie")
         {
             let addMovieViewController = segue.destination as! AddMovieViewController
-            let movie = Movie(id: "", name: "", desc: "", rating: 1, image: "")
+            let movie = Movie(id: "", name: "", desc: "", rating: 0, image: "")
             addMovieViewController.movie = movie
         }
     }

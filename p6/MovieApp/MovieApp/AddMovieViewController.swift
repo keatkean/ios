@@ -50,7 +50,7 @@ class AddMovieViewController: UIViewController {
             movieItem.image = imageTextField.text!
             
             let rating = Int(ratingTextField.text!)
-            movieItem.rating = rating != nil ? rating! : 1
+            movieItem.rating = rating != nil ? rating! : 0
             
             // Execute the SQL to insert the data
             // into the database
@@ -74,6 +74,10 @@ class AddMovieViewController: UIViewController {
         super.viewWillAppear(animated)
         
         if let m = movie {
+            let isNew = m.id == ""
+            title = isNew ? "Add Movie" : "Edit Movie"
+            idTextField.isEnabled = isNew
+            
             idTextField.text = m.id
             nameTextField.text = m.name
             ratingTextField.text = "\(m.rating)"

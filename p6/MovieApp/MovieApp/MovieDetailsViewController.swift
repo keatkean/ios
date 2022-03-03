@@ -33,8 +33,11 @@ class MovieDetailsViewController: UIViewController {
             
             // Rating
             var rating = ""
-            for _ in 1...m.rating {
-                rating.append("🍿")
+            if (m.rating > 0)
+            {
+                for _ in 1...m.rating {
+                    rating.append("🍿")
+                }
             }
             ratingLabel.text = rating
 
