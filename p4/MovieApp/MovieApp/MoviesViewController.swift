@@ -15,54 +15,49 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         return movieList.count
     }
 
+    // Use default UITableViewCell
     /*
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // First we query the table view to see if there are
         // any UITableViewCells that can be reused. iOS will
         // create a new one if there aren't any.
         //
-        let cell = tableView.dequeueReusableCell(
-            withIdentifier: "MovieCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath)
         
         // Using the re-used cell, or the newly created
         // cell, we update the text label's text property.
         //
-        let movie = movieList[indexPath.row]
-        cell.textLabel?.text = movie.name
+        let m = movieList[indexPath.row]
         
-        var stars = ""
-        for _ in 1...movie.rating {
-            stars.append("⭐")
+        cell.textLabel?.text = m.name
+        
+        var rating = ""
+        for _ in 1...m.rating {
+            rating.append("🍿")
         }
-        cell.detailTextLabel?.text = stars
+        cell.detailTextLabel?.text = rating
         
         return cell
     }
-    */
+     */
     
+    // Use MovieTableViewCell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // First we query the table view to see if there are
-        // any UITableViewCells that can be reused. iOS will
-        // create a new one if there aren't any.
-        //
-        let cell : MovieTableViewCell = tableView
-                    .dequeueReusableCell (withIdentifier: "MovieCell",
-                    for: indexPath)
-                    as! MovieTableViewCell
+        let cell : MovieTableViewCell = tableView.dequeueReusableCell (withIdentifier: "MovieCell", for: indexPath) as! MovieTableViewCell
+        let m = movieList[indexPath.row]
 
         // Name
-        let movie = movieList[indexPath.row]
-        cell.nameLabel.text = movie.name
-        
+        cell.nameLabel.text = m.name
+
         // Rating
-        var stars = ""
-        for _ in 1...movie.rating {
-            stars.append("⭐")
+        var rating = ""
+        for _ in 1...m.rating {
+            rating.append("🍿")
         }
-        cell.ratingLabel.text = stars
+        cell.ratingLabel.text = rating
 
         // Image
-        let url = URL(string: movie.image)!
+        let url = URL(string: m.image)!
         DispatchQueue.global().async {
             // Fetch Image Data
             if let data = try? Data(contentsOf: url) {
@@ -72,7 +67,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
                 }
             }
         }
-        
+
         return cell
     }
     

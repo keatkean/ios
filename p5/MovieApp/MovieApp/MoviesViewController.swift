@@ -16,15 +16,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // First we query the table view to see if there are
-        // any UITableViewCells that can be reused. iOS will
-        // create a new one if there aren't any.
-        //
-        let cell : MovieTableViewCell = tableView
-            .dequeueReusableCell (withIdentifier: "MovieCell",
-                                  for: indexPath)
-        as! MovieTableViewCell
-        
+        let cell : MovieTableViewCell = tableView.dequeueReusableCell (withIdentifier: "MovieCell", for: indexPath) as! MovieTableViewCell
         let m = movieList[indexPath.row]
         
         // Name
