@@ -35,19 +35,19 @@ class DataManager: NSObject {
             "desc": movie.desc
         ]) { err in
             if let err = err {
-                print("Error updating document: \(err)")
+                print("Error updating document \(movie.id): \(err)")
             } else {
-                print("Document successfully updated!")
+                print("Document \(movie.id) successfully updated!")
             }
         }
     }
     
-    static func deleteMovie(id:String) {
+    static func deleteMovie(id: String) {
         db.collection("movies").document(id).delete() { err in
             if let err = err {
-                print("Error removing document: \(err)")
+                print("Error removing document \(id): \(err)")
             } else {
-                print("Document successfully removed!")
+                print("Document \(id) successfully removed!")
             }
         }
     }
