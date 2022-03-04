@@ -58,7 +58,6 @@ class SaveMovieViewController: UIViewController {
         if let movieItem = movie {
             // assign the data entered by the user into
             // the movie object
-            //
             movieItem.id = idTextField.text!
             movieItem.name = nameTextField.text!.capitalized
             movieItem.desc = descTextView.text!
@@ -67,14 +66,11 @@ class SaveMovieViewController: UIViewController {
             let rating = Int(ratingTextField.text!)
             movieItem.rating = rating != nil ? rating! : 0
             
-            // Execute the SQL to insert the data
-            // into the database
-            //
+            // add or update movie
             DataManager.saveMovie(movie: movieItem)
             
             // close this view controller and pop back out to
-            // the one that shows the list of movies.
-            //
+            // the one that shows the list of movies
             self.navigationController?.popViewController(animated: true)
         }
     }

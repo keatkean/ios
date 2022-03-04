@@ -19,18 +19,18 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
         self.title = "Movies"
         
-        movieList = DataManager.getMovieList()
-        if (movieList.count == 0)
-        {
-            DataManager.setupTestData()
-        }
+        // Add sample movies
+        DataManager.setupTestData()
         
         tableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        loadMovies()
+    }
+    
+    func loadMovies() {
         movieList = DataManager.getMovieList()
         tableView.reloadData()
     }
@@ -75,8 +75,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         if editingStyle == .delete {
             let movie = movieList[indexPath.row]
             DataManager.deleteMovie(id: movie.id)
-            movieList = DataManager.getMovieList()
-            tableView.reloadData()
+            loadMovies()
         }
     }
     
