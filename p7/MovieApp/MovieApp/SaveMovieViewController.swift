@@ -56,6 +56,8 @@ class SaveMovieViewController: UIViewController {
         }
         
         if let movieItem = movie {
+            let isNew = movieItem.id == ""
+            
             // assign the data entered by the user into
             // the movie object
             //
@@ -70,7 +72,12 @@ class SaveMovieViewController: UIViewController {
             // Execute the SQL to insert the data
             // into the database
             //
-            DataManager.saveMovie(movie: movieItem)
+            if (isNew) {
+                DataManager.addMovie(movie: movieItem)
+            }
+            else {
+                DataManager.updateMovie(movie: movieItem)
+            }
             
             // close this view controller and pop back out to
             // the one that shows the list of movies.

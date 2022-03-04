@@ -18,21 +18,50 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         
         // Do any additional setup after loading the view.
         self.title = "Movies"
-        
-        movieList = DataManager.getMovieList()
-        if (movieList.count == 0)
-        {
-            DataManager.setupTestData()
-        }
+
+        // Add sample movies
+        //DataManager.setupTestData()
         
         tableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        movieList = DataManager.getMovieList()
-        tableView.reloadData()
+        loadMovies()
+    }
+    
+    // This function reloads the movies from the Firebase
+    // server. Once complete, gets the table view to
+    // refresh itself.
+    //
+    func loadMovies()
+    {
+        // This is a special way to call loadMovies.
+        //
+        // Even if loadMovies accepts a closure as a
+        // parameter, I can pass that parameter after
+        // the round brackets. In a way it is
+        // easier to read.
+        //
+        DataManager.loadMovies()
+        {
+            movieListFromFirebase in
+            
+            // This is a closure.
+            //
+            // This block of codes is executed when the
+            // async loading from Firebase is complete.
+            // What it is to reassigned the new list loaded
+            // from Firebase.
+            //
+            self.movieList = movieListFromFirebase
+            self.movieList.sort{$0.name < $1.name}
+            
+            // Once done, call on the Table View to reload
+            // all its contents
+            //
+            self.tableView.reloadData()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,8 +104,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         if editingStyle == .delete {
             let movie = movieList[indexPath.row]
             DataManager.deleteMovie(id: movie.id)
-            movieList = DataManager.getMovieList()
-            tableView.reloadData()
+            loadMovies()
         }
     }
     
