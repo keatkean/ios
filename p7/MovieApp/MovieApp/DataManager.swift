@@ -60,7 +60,6 @@ class DataManager: NSObject {
             } else {
                 var movieList: [Movie] = []
                 for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
                     let data = document.data()
                     let movie = Movie(
                         id: document.documentID,
