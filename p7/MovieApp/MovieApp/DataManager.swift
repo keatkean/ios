@@ -74,7 +74,7 @@ class DataManager: NSObject {
         }
     }
     
-    static func setupTestData() {
+    static func addTestData() {
         // Source: https://www.gv.com.sg/GVMovies
         addMovie(movie:Movie(
             id: "3040",

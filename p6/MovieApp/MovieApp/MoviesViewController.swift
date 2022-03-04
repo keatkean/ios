@@ -20,7 +20,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
         self.title = "Movies"
         
         // Add sample movies
-        DataManager.setupTestData()
+        DataManager.addTestData()
         
         tableView.dataSource = self
     }

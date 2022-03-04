@@ -24,9 +24,7 @@ class DataManager: NSObject {
         return movieList
     }
     
-    static func setupTestData() {
-        movieDict = [:]
-        
+    static func addTestData() {
         // Source: https://www.gv.com.sg/GVMovies
         saveMovie(movie:Movie(
             id: "3040",
