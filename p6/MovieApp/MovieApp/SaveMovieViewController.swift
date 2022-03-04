@@ -84,16 +84,16 @@ class SaveMovieViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let m = movie {
-            let isNew = m.id == ""
+        if let movieItem = movie {
+            let isNew = movieItem.id == ""
             title = isNew ? "Add Movie" : "Edit Movie"
             idTextField.isEnabled = isNew
             
-            idTextField.text = m.id
-            nameTextField.text = m.name
-            ratingTextField.text = "\(m.rating)"
-            imageTextField.text = m.image
-            descTextView.text = m.desc
+            idTextField.text = movieItem.id
+            nameTextField.text = movieItem.name
+            ratingTextField.text = "\(movieItem.rating)"
+            imageTextField.text = movieItem.image
+            descTextView.text = movieItem.desc
         }
     }
 

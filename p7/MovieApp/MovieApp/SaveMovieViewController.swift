@@ -10,7 +10,6 @@ import UIKit
 class SaveMovieViewController: UIViewController {
     var movie: Movie?
     
-    @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ratingTextField: UITextField!
     @IBOutlet weak var imageTextField: UITextField!
@@ -20,8 +19,7 @@ class SaveMovieViewController: UIViewController {
         // Validate to ensure that all the fields are
         // entered by the user. If not we show an alert.
         //
-        if idTextField.text == "" ||
-            nameTextField.text == "" ||
+        if nameTextField.text == "" ||
             descTextView.text == "" ||
             imageTextField.text == "" ||
             ratingTextField.text == ""
@@ -60,7 +58,6 @@ class SaveMovieViewController: UIViewController {
             
             // assign the data entered by the user into
             // the movie object
-            movieItem.id = idTextField.text!
             movieItem.name = nameTextField.text!.capitalized
             movieItem.desc = descTextView.text!
             movieItem.image = imageTextField.text!
@@ -91,16 +88,14 @@ class SaveMovieViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let m = movie {
-            let isNew = m.id == ""
+        if let movieItem = movie {
+            let isNew = movieItem.id == ""
             title = isNew ? "Add Movie" : "Edit Movie"
-            idTextField.isEnabled = isNew
-            
-            idTextField.text = m.id
-            nameTextField.text = m.name
-            ratingTextField.text = "\(m.rating)"
-            imageTextField.text = m.image
-            descTextView.text = m.desc
+
+            nameTextField.text = movieItem.name
+            ratingTextField.text = "\(movieItem.rating)"
+            imageTextField.text = movieItem.image
+            descTextView.text = movieItem.desc
         }
     }
 
