@@ -17,7 +17,7 @@ print ("The number of items in the array is: \(primeNumbers.count)")
 var sum = 0
 for i in 0 ... primeNumbers.count - 1
 {
-    sum = sum + primeNumbers[i];
+    sum = sum + primeNumbers[i]
 }
 print ("Sum of primeNumbers = \(sum)")
 

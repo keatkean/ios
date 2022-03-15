@@ -27,7 +27,7 @@ print (s)
 
 // Prints the string within another string
 //
-print ("The string was '\(s)'");
+print ("The string was '\(s)'")
 
 // Converts the whole string to uppercase and print the results.
 //

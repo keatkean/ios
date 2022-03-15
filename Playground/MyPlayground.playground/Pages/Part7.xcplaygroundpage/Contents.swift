@@ -40,7 +40,7 @@ class Square : Shape
         var s = ""
         for _ in 0 ... width - 1
         {
-            s += "*";
+            s += "*"
         }
         
         for _ in 0 ... width - 1
@@ -73,7 +73,7 @@ class Rectangle : Shape
         var s = ""
         for _ in 0 ... width - 1
         {
-            s += "*";
+            s += "*"
         }
         
         for _ in 0 ... height - 1
