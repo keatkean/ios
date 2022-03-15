@@ -1,3 +1,5 @@
+import Foundation
+
 // Part 2 - Doubles
 //
 // Declares two variables, one to store the radius of a circle
@@ -12,6 +14,7 @@ let pi = 3.141592
 //
 var circumference = 2 * pi * r
 print (circumference)
+print (String(format: "%.2f", circumference))
 
 // Calculate the area of a circle whose radius is 'r'
 // and print the result.
