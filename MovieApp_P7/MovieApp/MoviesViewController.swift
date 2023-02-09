@@ -90,6 +90,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource {
             //
             self.movieList = movieListFromFirebase
             self.movieList.sort{$0.name < $1.name}
+            self.movieList.sort{$0.rating > $1.rating}
             
             // Once done, call on the Table View to reload
             // all its contents
