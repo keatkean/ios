@@ -16,7 +16,7 @@ class SaveMovieViewController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet weak var imageTextField: UITextField!
     @IBOutlet weak var descTextView: UITextView!
     @IBOutlet weak var imageView: UIImageView!
-
+    
     @IBAction func imageTextEnd(_ sender: Any) {
         loadImage()
     }

@@ -36,22 +36,6 @@ class SaveMovieViewController: UIViewController {
             return
         }
         
-        // Validate image url
-        let url = URL(string: imageTextField.text!)!
-        if (try? Data(contentsOf: url)) == nil {
-            let alert = UIAlertController(
-                title: "Invalid Image URL",
-                message: "",
-                preferredStyle: UIAlertController.Style.alert)
-            
-            alert.addAction(UIAlertAction(title: "OK",
-                                          style: UIAlertAction.Style.default,
-                                          handler: nil))
-            
-            self.present(alert, animated: true, completion: nil)
-            return
-        }
-        
         if let movieItem = movie {
             let isNew = movieItem.id == ""
             
@@ -80,7 +64,7 @@ class SaveMovieViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -90,7 +74,7 @@ class SaveMovieViewController: UIViewController {
         if let movieItem = movie {
             let isNew = movieItem.id == ""
             title = isNew ? "Add Movie" : "Edit Movie"
-
+            
             nameTextField.text = movieItem.name
             ratingTextField.text = "\(movieItem.rating)"
             imageTextField.text = movieItem.image
