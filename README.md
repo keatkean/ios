@@ -19,5 +19,7 @@ P5 Navigation Controller
 P6 Add, Edit and Delete
 
 ## MovieApp_P7
-P7 Persistent Storage with Firebase
+P7 Persistent Data using Firebase
 
+## MovieApp_P8
+P8 File Storage using Firebase
