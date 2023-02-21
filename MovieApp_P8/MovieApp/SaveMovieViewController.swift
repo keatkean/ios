@@ -61,9 +61,9 @@ class SaveMovieViewController: UIViewController, UIImagePickerControllerDelegate
         let mediaType = info[UIImagePickerController.InfoKey.mediaType] as! String
         if mediaType == UTType.image.identifier {
             let imageURL = info[UIImagePickerController.InfoKey.imageURL] as! URL
+            
             // Handle your logic here, e.g. uploading file to Cloud Storage for Firebase
             print("Image URL: \(imageURL)")
-            
             FileManager.uploadFile(fileUrl: imageURL) {downloadUrl in
                 self.imageTextField.text = downloadUrl.absoluteString
                 self.loadImage()
