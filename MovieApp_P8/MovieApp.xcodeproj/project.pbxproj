@@ -23,6 +23,7 @@
 		70750AA527CE22DF0098B57B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70750AA427CE22DF0098B57B /* ProfileViewController.swift */; };
 		70A9C26329A49C030054B1DC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 70A9C26229A49C030054B1DC /* FirebaseStorage */; };
 		70A9C26529A49C6F0054B1DC /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A9C26429A49C6F0054B1DC /* FileManager.swift */; };
+		70A9C26729A5BAEB0054B1DC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A9C26629A5BAEB0054B1DC /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		70750A9E27CE0AF40098B57B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70750AA427CE22DF0098B57B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		70A9C26429A49C6F0054B1DC /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		70A9C26629A5BAEB0054B1DC /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				703EF5D227D6E44A007FCDD8 /* MovieDetailsViewController.swift */,
 				703EF5D427D717DE007FCDD8 /* SaveMovieViewController.swift */,
 				70A9C26429A49C6F0054B1DC /* FileManager.swift */,
+				70A9C26629A5BAEB0054B1DC /* UIViewController.swift */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				70750AA527CE22DF0098B57B /* ProfileViewController.swift in Sources */,
 				703EF5D927D73445007FCDD8 /* DataManager.swift in Sources */,
 				703EF5CF27D5CD7A007FCDD8 /* MoviesViewController.swift in Sources */,
+				70A9C26729A5BAEB0054B1DC /* UIViewController.swift in Sources */,
 				703EF5D127D621FA007FCDD8 /* MovieTableViewCell.swift in Sources */,
 				703EF5D327D6E44A007FCDD8 /* MovieDetailsViewController.swift in Sources */,
 				70A9C26529A49C6F0054B1DC /* FileManager.swift in Sources */,

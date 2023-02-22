@@ -121,6 +121,7 @@ class SaveMovieViewController: UIViewController, UIImagePickerControllerDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.dismissKeyboard()
         
         // Do any additional setup after loading the view.
         descTextView.layer.borderWidth = 0.5
