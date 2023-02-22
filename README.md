@@ -1,4 +1,4 @@
-# App Development with Swift
+# iOS App Development using UIKit
 
 ## MovieApp_P3
 P3 Tab Bar and Picker Controller
